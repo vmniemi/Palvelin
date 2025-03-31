@@ -9,12 +9,27 @@ Karvinen 2023: Run Salt Command Locally
 - cmd: ajaa komennon (ei suositella, viimeinen keino, koska pitää manuaalisesti luoda idempotenssi)
 
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux
-- 
+- Saltissa tärkeimmät käsiteet ovat master ja slave: masterilla hallintaan niitä
+- Ensiksi pitää asentaa master, sen jälkeen orja ja sen jälkeen pitää orjan pitää tietää missä master on. Lisäksi orjilla pitää olla oma uniikki id.
+- Sen jälkeen orja pitää käynnistää uudelleen ja antaa orjalle avain, jonka master hyväksyy
+
 Karvinen 2006: Raportin kirjoittaminen
+- Hyvän raportin pitää olla:
+    - Muille toistettavissa ja ympäristö hyvin kirjattu
+    - Täsmällinen: kellonajat, toimenpiteet, onnistumiset, epäonnistumiset, muut mahdolliset viat esim. viat konessa tai työkaluissa
+    - Lisäksi raportti olisi hyvä olla imperfektissä
+    - Helppolukuinen: väliotsikot, oikea kielioppi- ja asu
+    - Lähteiden viittaus
+    - Vilpin välttö: plagionti, luvaton kuvien käyttö ja sepittäminen eli selostu asioista joita ei oikeasti ole tehnyt.
+
 WMWare Inc: Salt Install Guide: Linux (DEB) (poimi vain olennainen osa)
+- Repojenn asennus
+- Saltin palveluiden asennus: salt-master, salt-minion salt-ssh, jne.
+- Asennettujen käyttöön otto (enable)
+
+
 a) Asenna Debian 12-Bookworm virtuaalikoneeseen. (Poikkeuksellisesti tätä alakohtaa ei tarvitse raportoida, jos siinä ei ole mitään ongelmia. Mutta jos on ongelmia, sitten täsmällinen raportti, jotta voidaan ratkoa niitä yhdessä.)
 b) Asenna Salt (salt-minion) Linuxille (uuteen virtuaalikoneeseesi).
-
 
 c) Viisi tärkeintä. Näytä Linuxissa esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
 d) Idempotentti. Anna esimerkki idempotenssista. Aja 'salt-call --local' komentoja, analysoi tulokset, selitä miten idempotenssi ilmenee.
