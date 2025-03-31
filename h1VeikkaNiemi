@@ -7,11 +7,13 @@ Karvinen 2023: Run Salt Command Locally
 - service: käynnistää demonin uudestaan
 - user: tekee käyttäjän
 - cmd: ajaa komennon (ei suositella, viimeinen keino, koska pitää manuaalisesti luoda idempotenssi)
+Oma huomio: saltissa komennot annetaan, siten että haluttu lopputilanne saavutetaan. Esim. komennon user lopputila, on että käyttäjä on tehty.
 
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux
 - Saltissa tärkeimmät käsiteet ovat master ja slave: masterilla hallintaan niitä
 - Ensiksi pitää asentaa master, sen jälkeen orja ja sen jälkeen pitää orjan pitää tietää missä master on. Lisäksi orjilla pitää olla oma uniikki id.
 - Sen jälkeen orja pitää käynnistää uudelleen ja antaa orjalle avain, jonka master hyväksyy
+Oma huomio
 
 Karvinen 2006: Raportin kirjoittaminen
 - Hyvän raportin pitää olla:
@@ -21,11 +23,13 @@ Karvinen 2006: Raportin kirjoittaminen
     - Helppolukuinen: väliotsikot, oikea kielioppi- ja asu
     - Lähteiden viittaus
     - Vilpin välttö: plagionti, luvaton kuvien käyttö ja sepittäminen eli selostu asioista joita ei oikeasti ole tehnyt.
+Oma huomio
 
 WMWare Inc: Salt Install Guide: Linux (DEB) (poimi vain olennainen osa)
 - Repojenn asennus
 - Saltin palveluiden asennus: salt-master, salt-minion salt-ssh, jne.
 - Asennettujen käyttöön otto (enable)
+Oma huomio
 
 
 a) Asenna Debian 12-Bookworm virtuaalikoneeseen. (Poikkeuksellisesti tätä alakohtaa ei tarvitse raportoida, jos siinä ei ole mitään ongelmia. Mutta jos on ongelmia, sitten täsmällinen raportti, jotta voidaan ratkoa niitä yhdessä.)
