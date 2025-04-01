@@ -34,6 +34,9 @@ Oma huomio
 
 a) Asenna Debian 12-Bookworm virtuaalikoneeseen. (Poikkeuksellisesti tätä alakohtaa ei tarvitse raportoida, jos siinä ei ole mitään ongelmia. Mutta jos on ongelmia, sitten täsmällinen raportti, jotta voidaan ratkoa niitä yhdessä.)
 
+Minulla ei varsinaisesti ollut ongelmia, mutta en saanut debian-live-12.10.0-amd64-xfce.iso toimimaan. Se ei antanut minun suorittaan asennusta loppuun (tein asetukset, se heitti pois kesken latauksen ja pyyti kirjautumaan. En pystynyt kirjautumaan, koska en ehtinyt viimeistellä asennusta.) Turhauttavan testailun jälkeen ongelma korjaantui asentamalla debian-live-12.10.0-amd64-cinnamon.iso sen sijaan ja sen jälkeen loput sujuivat ongelmitta.
+
+
 b) Asenna Salt (salt-minion) Linuxille (uuteen virtuaalikoneeseesi).
 ![Image](https://github.com/user-attachments/assets/b5c3b493-6d09-4059-9444-2347777b1945) 
 
@@ -67,10 +70,22 @@ cmd.run, lopputulos ajaa komennon
 
 d) Idempotentti. Anna esimerkki idempotenssista. Aja 'salt-call --local' komentoja, analysoi tulokset, selitä miten idempotenssi ilmenee.
 
+Idempotentti lyhyesti tarkoittaa, että jonkun toiminnan voi suorittaa lukuisia kertoja ja lopputulos pysyy samana. Aikaisemmassa kohdassa jo päästiinkiin aiheeseen. Otetaan esimerkiksi c kohdan ensimmäinen asennus pkg. Olen jo asentanut kyseisen paketin. 
+
+![Image](https://github.com/user-attachments/assets/0c7b11f7-48d2-4242-8dcd-ce7e28a0ba43)
+
+Näin käy jos yritän asentaa sen uudestaan. Se pyrkii pääsemään aina samaan lopputulokseen eli tässä tapauksessa paketin asentamiseen. Paketti on jo asennettu, mutta järjestelmä havaitsee, että se on jo asennettu. Komennon voi ajaa niin monta kertaa kuin haluaa, mutta lopputulos on aina sama. Tämä on yksi esimerkki miten idempotenssi esiintyy.
+
 Lähteet:
 
 https://terokarvinen.com/2021/salt-run-command-locally/ 
+
 https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/
+
 https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/ 
+
 https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html
+
 https://www.youtube.com/watch?v=EF6fqnnl3Uk 
+
+https://loadfocus.com/fi-fi/glossary/what-is-idempotency 
