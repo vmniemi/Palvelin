@@ -33,8 +33,9 @@ Oma huomio
 
 
 a) Asenna Debian 12-Bookworm virtuaalikoneeseen. (Poikkeuksellisesti tätä alakohtaa ei tarvitse raportoida, jos siinä ei ole mitään ongelmia. Mutta jos on ongelmia, sitten täsmällinen raportti, jotta voidaan ratkoa niitä yhdessä.)
-b) Asenna Salt (salt-minion) Linuxille (uuteen virtuaalikoneeseesi).
 
+b) Asenna Salt (salt-minion) Linuxille (uuteen virtuaalikoneeseesi).
+![Image](https://github.com/user-attachments/assets/b5c3b493-6d09-4059-9444-2347777b1945) 
 c) Viisi tärkeintä. Näytä Linuxissa esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
 d) Idempotentti. Anna esimerkki idempotenssista. Aja 'salt-call --local' komentoja, analysoi tulokset, selitä miten idempotenssi ilmenee.
 
