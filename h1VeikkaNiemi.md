@@ -38,6 +38,26 @@ b) Asenna Salt (salt-minion) Linuxille (uuteen virtuaalikoneeseesi).
 ![Image](https://github.com/user-attachments/assets/b5c3b493-6d09-4059-9444-2347777b1945) 
 
 c) Viisi tärkeintä. Näytä Linuxissa esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
+![Image](https://github.com/user-attachments/assets/48831425-f49b-4b95-9e13-70ac6886f1e9) 
+pkg asennus, haluttu lopputulos on asennettu paketti
+![Image](https://github.com/user-attachments/assets/078bae58-3205-4ef2-a258-35a231976e55)
+file, lopputulos tehty tiedosto
+![Image](https://github.com/user-attachments/assets/91925f32-447a-42df-b628-644e71ca2de6)
+luodun tiedoston tarkastus cat-komennolla
+
+![Image](https://github.com/user-attachments/assets/1537af09-4d2e-4776-b24d-bce0c4fed865)
+service, haluttu lopputulos päällä oleva palvelu
+
+![Image](https://github.com/user-attachments/assets/71a8fd71-b562-45ff-9531-c558cacfa9a7)
+service, palvelun sammutus (dead)
+
+![Image](https://github.com/user-attachments/assets/40067908-3e98-48a7-9a75-055e93054d9e)
+user, lopputulos uuden käyttäjän luominen
+
+
+
+
+
 d) Idempotentti. Anna esimerkki idempotenssista. Aja 'salt-call --local' komentoja, analysoi tulokset, selitä miten idempotenssi ilmenee.
 
 Lähteet:
