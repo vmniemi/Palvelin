@@ -7,13 +7,15 @@ Karvinen 2023: Run Salt Command Locally
 - service: käynnistää demonin uudestaan
 - user: tekee käyttäjän
 - cmd: ajaa komennon (ei suositella, viimeinen keino, koska pitää manuaalisesti luoda idempotenssi)
+- 
 Oma huomio: saltissa komennot annetaan, siten että haluttu lopputilanne saavutetaan. Esim. komennon user lopputila, on että käyttäjä on tehty.
 
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux
 - Saltissa tärkeimmät käsiteet ovat master ja slave: masterilla hallintaan niitä
 - Ensiksi pitää asentaa master, sen jälkeen orja ja sen jälkeen pitää orjan pitää tietää missä master on. Lisäksi orjilla pitää olla oma uniikki id.
 - Sen jälkeen orja pitää käynnistää uudelleen ja antaa orjalle avain, jonka master hyväksyy
-Oma huomio
+- 
+Oma huomio: Orjan tietätävät missä master on antamalla masterin ip-osoitteen muokkaamalla niiden config tiedostoa kohteessa /etc/salt/minion
 
 Karvinen 2006: Raportin kirjoittaminen
 - Hyvän raportin pitää olla:
@@ -23,13 +25,15 @@ Karvinen 2006: Raportin kirjoittaminen
     - Helppolukuinen: väliotsikot, oikea kielioppi- ja asu
     - Lähteiden viittaus
     - Vilpin välttö: plagionti, luvaton kuvien käyttö ja sepittäminen eli selostu asioista joita ei oikeasti ole tehnyt.
-Oma huomio
+    - 
+Oma kysymys: Jäi vähän epäselväksi kuinka tarkasti pitäisi viittaa lähteisiin, joten haluaisin siihen vähän tarkennusta (siellä lukee että ei tarvitse noudattaa Haaga-Helia paperijulkaisuihin tarkoitettuja ohjeita, mutta missä määrin?)
 
 WMWare Inc: Salt Install Guide: Linux (DEB) (poimi vain olennainen osa)
 - Repojenn asennus
 - Saltin palveluiden asennus: salt-master, salt-minion salt-ssh, jne.
 - Asennettujen käyttöön otto (enable)
-Oma huomio
+- 
+Oma huomio: Asentaminen oli yksinkertaista ja en tiedä tarviiko kaikkia palveluita asentaan, joten tein sen varmuuden vuoksi.
 
 
 a) Asenna Debian 12-Bookworm virtuaalikoneeseen. (Poikkeuksellisesti tätä alakohtaa ei tarvitse raportoida, jos siinä ei ole mitään ongelmia. Mutta jos on ongelmia, sitten täsmällinen raportti, jotta voidaan ratkoa niitä yhdessä.)
@@ -43,22 +47,34 @@ b) Asenna Salt (salt-minion) Linuxille (uuteen virtuaalikoneeseesi).
 c) Viisi tärkeintä. Näytä Linuxissa esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
 
 ![Image](https://github.com/user-attachments/assets/48831425-f49b-4b95-9e13-70ac6886f1e9) 
+
 pkg asennus, haluttu lopputulos on asennettu paketti
 
 ![Image](https://github.com/user-attachments/assets/078bae58-3205-4ef2-a258-35a231976e55)
+
+
 file, lopputulos tehty tiedosto
 
 ![Image](https://github.com/user-attachments/assets/91925f32-447a-42df-b628-644e71ca2de6)
+
 luodun tiedoston tarkastus cat-komennolla
 
 ![Image](https://github.com/user-attachments/assets/1537af09-4d2e-4776-b24d-bce0c4fed865)
+
+
 service, haluttu lopputulos päällä oleva palvelu
 
 
+
 ![Image](https://github.com/user-attachments/assets/71a8fd71-b562-45ff-9531-c558cacfa9a7)
+
 service, palvelun sammutus (dead)
 
+
+
 ![Image](https://github.com/user-attachments/assets/40067908-3e98-48a7-9a75-055e93054d9e)
+
+
 user, lopputulos uuden käyttäjän luominen
 
 ![Image](https://github.com/user-attachments/assets/0fcfe67a-cf0a-4988-b0e1-a6dbc8fd81ef)
@@ -77,15 +93,27 @@ Idempotentti lyhyesti tarkoittaa, että jonkun toiminnan voi suorittaa lukuisia 
 Näin käy jos yritän asentaa sen uudestaan. Se pyrkii pääsemään aina samaan lopputulokseen eli tässä tapauksessa paketin asentamiseen. Paketti on jo asennettu, mutta järjestelmä havaitsee, että se on jo asennettu. Komennon voi ajaa niin monta kertaa kuin haluaa, mutta lopputulos on aina sama. Tämä on yksi esimerkki miten idempotenssi esiintyy.
 
 Lähteet:
+Karvinen, Tero:,Nettisivu
+https://terokarvinen.com/ 
 
+Karvinen, Tero: Nettisivu, 2025-26-03 , Palvelinten hallinta
+https://terokarvinen.com/palvelinten-hallinta/
+
+Karvinen, Tero: Nettisivu,2021, Run Salt Command Locally
 https://terokarvinen.com/2021/salt-run-command-locally/ 
 
+Karvinen, Tero: Oppitunnit 2021, Run Salt Command Locally
 https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/
 
+Karvinen, Tero: Nettisivu, 2006-06-04, Raportin kirjoittaminen
 https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/ 
 
+Saltproject, Nettisivu,S.a, Salt install guide
 https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html
 
+
+ Bhandari, Roshan: video, 6-12-2020,  PROTIP: ADD Videos/Gif/Images to Readme Github | Upload Vid
 https://www.youtube.com/watch?v=EF6fqnnl3Uk 
 
+Ifloadfocus, nettisivu, s.a, Mikä on Idempotenssi?
 https://loadfocus.com/fi-fi/glossary/what-is-idempotency 
