@@ -2,10 +2,12 @@ x) Lue ja tiivistä. (Tässä x-alakohdassa ei tarvitse tehdä testejä tietokon
 Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (Huomaa: nykyinen Debian stable on 12-Bookworm, Vagrantissa "debian/bookworm64". Vanhentunutta 11-bullseye:ta ei enää käytetä)
 
 - Vagrantilla voi tehdä nopeasti virtuaalikoneita erittäin nopeasti.
+- Sen saa asennettua helposti komennoilla Linuxilla
   
         sudo apt-get update
         sudo apt-get install vagrant virtualbox
-  
+- Valitettavasti en ole (vielä) Linux käyttäjä joten latasin sen o
+
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux (Huomaa: Nykyisin ennen Saltin asentamista on asennettava ensin varasto [package repository], ohje h1 vinkeissä)
 
 Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves, vain kohdat
