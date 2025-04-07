@@ -9,9 +9,24 @@ Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (
 
   
 - Valitettavasti en ole (vielä) Linux käyttäjä joten latasin sen osoitteesta https://developer.hashicorp.com/vagrant/install Windows-version ja AMD64 version.
-- Vagrantille pitää tehdä oma kansio ja jonne pitää laittaa konfiguraatiotiedosto. Artikkelissä oli opettajan oma esimerkki versio siitä
+- Vagrantille pitää tehdä oma kansio ja jonne pitää laittaa konfiguraatiotiedosto. Artikkelissä oli opettajan oma esimerkki versio siitä.
+- orjille pääsee ottamalla ssh-yhteyden komennolla
+
+        ssh@koneen_id
+  
+  Takaisin koneelle pääsee takaisin exit komennolla
+
+  Komenolla
+  
+          vagrant destroy
+  tuhotaan koneet ja kaikki sen tiedostot
+  ja komennolla
+
+      vagrant up
+  voi luoda koneita
 
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux (Huomaa: Nykyisin ennen Saltin asentamista on asennettava ensin varasto [package repository], ohje h1 vinkeissä)
+
 
 Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves, vain kohdat
 
@@ -43,3 +58,4 @@ https://terokarvinen.com/palvelinten-hallinta/
 https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ 
 https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux 
 https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file 
+https://forums.virtualbox.org/viewtopic.php?t=96290 
