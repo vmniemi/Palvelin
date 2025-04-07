@@ -21,7 +21,8 @@ top.sls - What Slave Runs What States
 a) Hello Vagrant! Osoita jollain komennolla, että Vagrant on asennettu (esim tulostaa vagrantin versionumeron). Jos et ole vielä asentanut niitä, raportoi myös Vagrant ja VirtualBox asennukset. (Jos Vagrant ja VirtualBox on jo asennettu, niiden asennusta ei tarvitse tehdä eikä raportoida uudelleen.)
 
 Minulla oli jo valmiiksi asennettuna virtualbox, joten minun täytyi vain asentaa Vagrant. Tein se kuten jo aikaisemmassa selostetussa vaiheessa eli latasin sen https://developer.hashicorp.com/vagrant/install. Ladattuani tiedoston, siinä oli setup wizard ja sain sen asennuttua. Käynnistin koneeni uudestaan ja ajoin komennon
-        vagrant --version
+
+          vagrant --version
 Windowsin cmd:ssä
 
 ![Image](https://github.com/user-attachments/assets/1a4635db-60b7-4abd-a91e-cc1a44ad9b0e)
