@@ -6,7 +6,10 @@ Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (
   
         sudo apt-get update
         sudo apt-get install vagrant virtualbox
-- Valitettavasti en ole (vielä) Linux käyttäjä joten latasin sen o
+
+  
+- Valitettavasti en ole (vielä) Linux käyttäjä joten latasin sen osoitteesta https://developer.hashicorp.com/vagrant/install Windows-version ja AMD64 version.
+- Vagrantille pitää tehdä oma kansio ja jonne pitää laittaa konfiguraatiotiedosto. Artikkelissä oli opettajan oma esimerkki versio siitä
 
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux (Huomaa: Nykyisin ennen Saltin asentamista on asennettava ensin varasto [package repository], ohje h1 vinkeissä)
 
@@ -26,3 +29,8 @@ d) Herra-orja verkossa. Demonstroi Salt herra-orja arkkitehtuurin toimintaa kahd
 e) Kokeile vähintään kahta tilaa verkon yli (viisikosta: pkg, file, service, user, cmd)
 
 Lähteet
+https://terokarvinen.com/ 
+https://terokarvinen.com/palvelinten-hallinta/ 
+https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ 
+https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux 
+https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file 
