@@ -81,7 +81,7 @@ Sitten asensin tarvittavat repot saltille ja ajoin
         sudo apt-get update
 Jotta paketit päivittyvät
 
-Asensin molemmille virtuaalikoneille saltin eli 
+Asensin molemmille virtuaalikoneelle saltin eli 
 
         mkdir -p /etc/apt/keyrings
 
@@ -89,17 +89,41 @@ Asensin molemmille virtuaalikoneille saltin eli
 
         curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources | sudo tee /etc/apt/sources.list.d/salt.sources
         
-  -Ja vielä lopuksi orjalle
+  -Ja vielä lopuksi 
         
-        sudo systemctl restart salt-minion.service
+
+
+
+
+
+c) Kaksin kaunihimpi. Tee kahden Linux-tietokoneen verkko Vagrantilla. Osoita, että koneet voivat pingata toisiaan. 
+
+d) Herra-orja verkossa. Demonstroi Salt herra-orja arkkitehtuurin toimintaa kahden Linux-koneen verkossa, jonka teit Vagrantilla. Asenna toiselle koneelle salt-master, toiselle salt-minion. Laita orjan /etc/salt/minion -tiedostoon masterin osoite. Hyväksy avain ja osoita, että herra voi komentaa orjakonetta.
+
 
 Tein t001 masterin 
+
 ![t001master](https://github.com/user-attachments/assets/a5a36844-c5f5-42c3-954f-b1c3ade1982b)
 
 
-c) Kaksin kaunihimpi. Tee kahden Linux-tietokoneen verkko Vagrantilla. Osoita, että koneet voivat pingata toisiaan.
+Ja t002 orjan 
 
-d) Herra-orja verkossa. Demonstroi Salt herra-orja arkkitehtuurin toimintaa kahden Linux-koneen verkossa, jonka teit Vagrantilla. Asenna toiselle koneelle salt-master, toiselle salt-minion. Laita orjan /etc/salt/minion -tiedostoon masterin osoite. Hyväksy avain ja osoita, että herra voi komentaa orjakonetta.
+![t002orja](https://github.com/user-attachments/assets/d3c4e222-cfa2-41cc-ac18-7c652cc02234)
+
+
+orjalle
+        
+        sudo systemctl restart salt-minion.service
+
+
+Lisäsin orjalle masterin ip kohteeseen (sudoedit komennolla)
+
+        /etc/salt/minion 
+
+Menin takaisin masterille ja hyväksyin orjan avaimen 
+![Saltkey](https://github.com/user-attachments/assets/e7cbd6be-4f77-4f04-9633-019996404728)
+
+
 
 e) Kokeile vähintään kahta tilaa verkon yli (viisikosta: pkg, file, service, user, cmd)
 
