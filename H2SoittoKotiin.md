@@ -27,6 +27,8 @@ Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (
 
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux (Huomaa: Nykyisin ennen Saltin asentamista on asennettava ensin varasto [package repository], ohje h1 vinkeissä)
 
+-
+
 
 Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves, vain kohdat
 
@@ -46,6 +48,55 @@ Tulos oli tämä joten Vagrant on nyt asennettu isäntäkoneelle.
 
 b) Linux Vagrant. Tee Vagrantilla uusi Linux-virtuaalikone.
 
+Tein vagrantille oman kansion
+
+![Image](https://github.com/user-attachments/assets/c8c7da05-a752-420e-946a-ca8623356a19)
+
+Sen jälkeen yritin ajaa komennon, mutta mitään ei tapahtunut. 
+
+Tarkastin tilannetta komennolla:
+
+          vagrant global-status
+  Ja mitään ei ollut ylhäällä. Loin ympäristön 
+
+    vagrant init debian/bullseye64 --box-version 11.20241217.1
+
+  - Sain ympäristön netistä
+  - Sen jälkeen menin laittamaan opettajan config-tiedoston Vagrantfile tiedostoon.
+  - 
+    
+
+![vagrantup](https://github.com/user-attachments/assets/189b316d-795e-4f34-9cba-027ccc11c5e8)
+
+
+![Image](https://github.com/user-attachments/assets/b212885f-a4c9-41e1-b100-dcb2613836c5)
+
+Sen jälkeen ajoin komennon vagrant up uudestaan ja se alkoi toimimaan.
+
+
+![Image](https://github.com/user-attachments/assets/e6b39407-dee8-4af2-af7f-5f76ce7fcef8)
+
+Sitten asensin tarvittavat repot saltille ja ajoin 
+
+        sudo apt-get update
+Jotta paketit päivittyvät
+
+Asensin molemmille virtuaalikoneille saltin eli 
+
+        mkdir -p /etc/apt/keyrings
+
+        curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp
+
+        curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources | sudo tee /etc/apt/sources.list.d/salt.sources
+        
+  -Ja vielä lopuksi orjalle
+        
+        sudo systemctl restart salt-minion.service
+
+Tein t001 masterin 
+![t001master](https://github.com/user-attachments/assets/a5a36844-c5f5-42c3-954f-b1c3ade1982b)
+
+
 c) Kaksin kaunihimpi. Tee kahden Linux-tietokoneen verkko Vagrantilla. Osoita, että koneet voivat pingata toisiaan.
 
 d) Herra-orja verkossa. Demonstroi Salt herra-orja arkkitehtuurin toimintaa kahden Linux-koneen verkossa, jonka teit Vagrantilla. Asenna toiselle koneelle salt-master, toiselle salt-minion. Laita orjan /etc/salt/minion -tiedostoon masterin osoite. Hyväksy avain ja osoita, että herra voi komentaa orjakonetta.
@@ -59,3 +110,4 @@ https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullsey
 https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux 
 https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file 
 https://forums.virtualbox.org/viewtopic.php?t=96290 
+https://portal.cloud.hashicorp.com/vagrant/discover/debian/bullseye64/versions/11.20241217.1 
