@@ -98,6 +98,10 @@ Asensin molemmille virtuaalikoneelle saltin eli
 
 c) Kaksin kaunihimpi. Tee kahden Linux-tietokoneen verkko Vagrantilla. Osoita, että koneet voivat pingata toisiaan. 
 
+![ping1](https://github.com/user-attachments/assets/26b4ce9d-652c-47be-84b7-358c00db5bb0)
+
+![ping2](https://github.com/user-attachments/assets/2c147d5f-6360-47d9-9e14-07a10089ba34)
+
 d) Herra-orja verkossa. Demonstroi Salt herra-orja arkkitehtuurin toimintaa kahden Linux-koneen verkossa, jonka teit Vagrantilla. Asenna toiselle koneelle salt-master, toiselle salt-minion. Laita orjan /etc/salt/minion -tiedostoon masterin osoite. Hyväksy avain ja osoita, että herra voi komentaa orjakonetta.
 
 
@@ -151,7 +155,17 @@ Ja tietenkin uudelleen asentamalla:
 
 ![toimiii](https://github.com/user-attachments/assets/b0ebe8d1-1434-4b33-8297-4f3c4b082f4b)
 
+Tässä kuva virheestä 
 
+![Image](https://github.com/user-attachments/assets/d3790f3e-f8bf-4d2e-a11e-a64ebc24ba79)
+
+Myöskin tämmöinen tuli
+
+![mastervirhe2](https://github.com/user-attachments/assets/15bc52c4-0860-4ddf-8a51-e4a5c9f831d6)
+
+![mastervirhe3](https://github.com/user-attachments/assets/3c5ffbe7-7cde-447b-80cc-52409c4ee329)
+
+Nämä kaikki kuintenkin katosivat, ja kaikki toimi niinkuin pitikin salt-masterin poiston ja uudelleen asennuksen jälkeen.
 
 
 e) Kokeile vähintään kahta tilaa verkon yli (viisikosta: pkg, file, service, user, cmd)
