@@ -120,18 +120,56 @@ Lisäsin orjalle masterin ip kohteeseen (sudoedit komennolla)
 
         /etc/salt/minion 
 
+
+![slaveip](https://github.com/user-attachments/assets/c9066285-596a-4bf7-b36c-64c909576ff3)
+
+
 Menin takaisin masterille ja hyväksyin orjan avaimen 
+
 ![Saltkey](https://github.com/user-attachments/assets/e7cbd6be-4f77-4f04-9633-019996404728)
+
+
+Minulle tuli pieni ongelma salt-masterin kanssa
+
+
+![masterongelma](https://github.com/user-attachments/assets/b67d5562-e671-41c3-ac6a-08b5ee86f901)
+
+
+Mutta se lokien katselun ja ihmettelyn jälkeen ratkesi simppelillä tavalla: poistamalla 
+
+
+![saltmasterpurge](https://github.com/user-attachments/assets/5be5aa2d-5789-497b-bcc5-f1d7aeec8820)
+
+
+Ja tietenkin uudelleen asentamalla:
+
+
+![saltmre](https://github.com/user-attachments/assets/14cabb7b-d24d-4cad-b02e-e3771ed4e4f7)
+
+
+
+
+![toimiii](https://github.com/user-attachments/assets/b0ebe8d1-1434-4b33-8297-4f3c4b082f4b)
+
 
 
 
 e) Kokeile vähintään kahta tilaa verkon yli (viisikosta: pkg, file, service, user, cmd)
 
 Lähteet
+
 https://terokarvinen.com/ 
+
 https://terokarvinen.com/palvelinten-hallinta/ 
+
 https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ 
-https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux 
+
+https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?
+
+fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux 
+
 https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file 
+
 https://forums.virtualbox.org/viewtopic.php?t=96290 
+
 https://portal.cloud.hashicorp.com/vagrant/discover/debian/bullseye64/versions/11.20241217.1 
