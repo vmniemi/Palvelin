@@ -353,7 +353,7 @@ Isoin ongelma on ollut avaimen näkymiseen saaminen
 ![mastererror2](https://github.com/user-attachments/assets/18c71c2d-f8ad-4a9e-8f55-0c1f28641acb)
 
 
-Tämä olisi varmasti helpompi tehdä Linuxilla, mutta olen yllättynyt kuinka pitkällä olen päässyt.
+Tämä olisi varmasti helpompi tehdä Linuxilla, mutta olen yllättynyt kuinka pitkällä olen päässyt. En tiedä yhtään mistä ongelmat johtuvat, olen kokeillut googlailla tuntikaupalla. Uskon, että se on yhdistelmä lukuisista käyttäjävirheistä ja Windowsistä (enemmän varmaan käyttäjän puolella jos mitään)
 
 Olisin vielä ajanut esimerkiksi nämä komennot, jos olisin pystynyt. En tiedä kyllä miksi avainta ei edes tule näkyviin, jotta voisin hyväksyä sen.
 
