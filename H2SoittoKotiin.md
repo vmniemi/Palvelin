@@ -364,17 +364,16 @@ Olisin vielä ajanut esimerkiksi nämä komennot, jos olisin pystynyt. En tiedä
  
 Lähteet
 
-https://terokarvinen.com/ 
+Lähteet: Karvinen, Tero:,Nettisivu https://terokarvinen.com/ 
 
-https://terokarvinen.com/palvelinten-hallinta/ 
+Karvinen, Tero: Nettisivu, 2025-26-03 https://terokarvinen.com/palvelinten-hallinta/ 
 
-https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ 
+Karvinen, Tero: Nettisivu, 2021 https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ 
 
-https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?
+Karvinen, Tero: Nettisivu, 2018https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux  
 
-fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux 
 
-https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file 
+Karvinen, Tero: Nettisivu,2023 ,https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file 
 
 https://forums.virtualbox.org/viewtopic.php?t=96290 
 
