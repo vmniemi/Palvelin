@@ -17,14 +17,21 @@ Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (
 
   Tässä on minun (alkeellinen) käsitys mitä tiedosto tekee
   
-'''
-{
+
 
   $tscript = <<TSCRIPT
+  
+Määrittelee kielen
+  
 set -o verbose
 apt-get update
 apt-get -y install tree
+
+Päivittää ja asentaa tree-paketin
+
 echo "Done - set up test environment - https://terokarvinen.com/search/?q=vagrant"
+
+Tulostaa Done - set up test environment - https://terokarvinen.com/search/?q=vagrant kun on valmis
 TSCRIPT
 
 Vagrant.configure("2") do |config|
@@ -32,18 +39,29 @@ Vagrant.configure("2") do |config|
 	config.vm.synced_folder "shared/", "/home/vagrant/shared", create: true
 	config.vm.provision "shell", inline: $tscript
 	config.vm.box = "debian/bullseye64"
+Tekee jaetun kansion "shared"
+Hankkii shellin, jolla ajetaan tscriptejä
+Määrittää käyttöjärjestelmän Debian bullseye64
+ 
 
 	config.vm.define "t001" do |t001|
 		t001.vm.hostname = "t001"
 		t001.vm.network "private_network", ip: "192.168.88.101"
 	end
 
+ Luo ensimmäisen virtuaalikoneen t001, nimen voi vaihtaa vaihtamalla t001.vm.hostname = "haluttu nimi"
+ Lisäksi verkko määritetään yksityiseksi ja sille annetaan ip-osoite
+
 	config.vm.define "t002", primary: true do |t002|
 		t002.vm.hostname = "t002"
 		t002.vm.network "private_network", ip: "192.168.88.102"
 	end
-	
+ 
+Samat vaiheet toiselle koneelle
+ 
 end
+
+Scripti päätetään
 
 }
 - orjille pääsee ottamalla ssh-yhteyden komennolla
