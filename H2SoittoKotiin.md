@@ -80,8 +80,45 @@ Scripti päätetään
   voi luoda koneita
 
 Karvinen 2018: Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux (Huomaa: Nykyisin ennen Saltin asentamista on asennettava ensin varasto [package repository], ohje h1 vinkeissä)
+Ensiksi koneille pitää asentaa tarvittavat repot
 
--
+# Luodaan kansio avaimille
+	mkdir -p /etc/apt/keyrings
+# Tehdään luottamussuhde koneiden välille
+	curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp
+# Tehdään repo
+	curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources | sudo tee /etc/apt/sources.list.d/salt.sources
+
+-Salt-masterin asennus yhdelle koneelle, jolla ohjataan orjia
+ 
+		master$ sudo apt-get update
+		master$ sudo apt-get -y install salt-master
+  
+- Ip-osoitteen hakeminen orjaa varten komennolla
+
+		master$ hostname -I
+
+-Salt-minionin asennus toiselle koneelle, jotta master voi ohjata sitä
+
+ 		orja$ sudo apt-get update
+		orja$ sudo apt-get -y install salt-minion
+  
+  		slave$ sudoedit /etc/salt/minion
+		master: Masterin ip-osoite, joka saatiin hostname -I komennolla
+  
+-Orjan uudeellenkäynnistys, jotta asetukset päivittyvät
+
+ 		slave$ sudo systemctl restart salt-minion.service
+
+-Orja-avaimen hyväksyminen, jotta koneet voivat kommunikoida keskenään.
+
+  		master$ sudo salt-key -A
+Unaccepted Keys:
+orja1
+Proceed? [n/Y]
+Key for minion orja1 accepted.
+
+  
 
 
 Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves, vain kohdat
