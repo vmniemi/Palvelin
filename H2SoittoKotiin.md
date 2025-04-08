@@ -278,11 +278,73 @@ Myöskin tämmöinen tuli
 
 ![mastervirhe3](https://github.com/user-attachments/assets/3c5ffbe7-7cde-447b-80cc-52409c4ee329)
 
-Nämä kaikki kuintenkin katosivat, ja kaikki toimi niinkuin pitikin salt-masterin poiston ja uudelleen asennuksen jälkeen.
+Nämä kaikki kuintenkin katosivat, ja kaikki toimi niinkuin pitikin salt-masterin poiston ja uudelleen asennuksen jälkeen. (Ainakin tähän asti)
 
 
 e) Kokeile vähintään kahta tilaa verkon yli (viisikosta: pkg, file, service, user, cmd)
 
+
+
+
+Kokeilin komentoa
+
+ 		sudo salt '*' cmd.run 'whoami'
+
+   ![EItoimi1](https://github.com/user-attachments/assets/a8f640b0-a488-4bf6-baca-3c4274965e6a)
+
+   ei toiminut 
+![eitoimi2](https://github.com/user-attachments/assets/2a6056d7-7b91-46ae-80c2-77a6605ee91c)
+
+
+ Tulee jatkuvasti Salt configured to run as user "salt" but unable to switch.
+
+
+ Sen jälkeen ajoin 
+
+   		vagrant destroy
+
+ja 		
+
+		vagrant up
+
+  Saadakseni tuoreet koneet.
+
+  Tein kaikki samat asennukset uudestaan 
+
+      			 mkdir -p /etc/apt/keyrings
+
+
+   Alkaen ja tein t001 masterin ja t002 orjan aivan kuin aikasemmin
+
+   En saanut aivainta t002:lle 
+
+   
+![eiavaimia](https://github.com/user-attachments/assets/76f6a9aa-79a8-4f01-9bbf-ee30c43d0ed8)
+
+
+Koetin pingata minonilla masteria ja tuli vaikka minkälaista. Pääasiallisesti Unable to sign_in to master: Attempt to authenticate with the salt master failed with timeout error ja [Errno 1] Operation not permitted: '/etc/salt/pki/minion'
+
+![Minionping](https://github.com/user-attachments/assets/6b96c2c1-8dd0-4885-ad51-93d5afce0ac4)
+
+
+  			
+![minionerror](https://github.com/user-attachments/assets/d3e4b626-4a1d-491c-a958-f028b92adf67)
+
+Ja nyt en edes avainta saadakseni luottamussuhdetta masterin kanssa. Se oli alunperinkin vaikeaa, mutta nyt sitä ei tule ollenkaan. Olen tarkastanut conf tiedostot ja avannut portit 4505 ja 4506 palomuurista.
+
+Isoin ongelma on ollut avaimen näkymiseen saaminen
+
+![miniondebug](https://github.com/user-attachments/assets/266ce654-84d4-414e-9dbc-e200b42403bf)
+
+Tämä olisi varmasti helpompi tehdä Linuxilla, mutta olen yllättynyt kuinka pitkällä olen päässyt.
+
+Olisin vielä ajanut esimerkiksi nämä komennot, jos olisin pystynyt. En tiedä kyllä miksi avainta ei edes tule näkyviin, jotta voisin hyväksyä sen.
+
+			sudo salt '*' state.single user.present käyttäjä1
+   			sudo salt '*' state.single pkg.installed apache2
+      			sudo salt '*' state.single service.running apache2
+
+ 
 Lähteet
 
 https://terokarvinen.com/ 
