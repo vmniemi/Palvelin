@@ -125,18 +125,27 @@ Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves,
 
 Infra as Code - Your wishes as a text file
 
+Init.sls tiedostolla voidaan kätevästi hallita tiloja. Tehdään hakemisto, jonk sisälle init.sls
+
  		sudo mkdir -p /srv/salt/hello
 		$ sudoedit /srv/salt/hello/init.sls
 .
+Katsotaan sisälle
 
 		$ cat /srv/salt/hello/init.sls
+
+  Sisällä on file managed (sen voisi varmasti vaihtaa ihan miksi haluaisi) eli haluttu lopputulos on uusi luoto tiedosto
   
 		/tmp/infra-as-code:
   			file.managed
 
 			$ sudo salt '*' state.apply hello
 
+   Kun hello tiedostoa kutsutaan, se ajaa mitä sen sisällä on, tässä tapauksessa file.managed
+
 top.sls - What Slave Runs What States
+
+top.sls:llä voidaan määrittää mitkä orjat ajavat mitäkin lopputiloja (state)
 
  	sudo salt '*' state.apply hello^C
 	$ sudoedit /srv/salt/top.sls
@@ -144,9 +153,13 @@ top.sls - What Slave Runs What States
 	base:
   		'*':
     		- hello
+
+Sen voi ajaa kaikilla orjilla
+
 Now you don't have to name any modules on state.apply:
 
-$ sudo salt '*' state.apply
+
+		$ sudo salt '*' state.apply
 
 a) Hello Vagrant! Osoita jollain komennolla, että Vagrant on asennettu (esim tulostaa vagrantin versionumeron). Jos et ole vielä asentanut niitä, raportoi myös Vagrant ja VirtualBox asennukset. (Jos Vagrant ja VirtualBox on jo asennettu, niiden asennusta ei tarvitse tehdä eikä raportoida uudelleen.)
 
