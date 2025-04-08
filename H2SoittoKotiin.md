@@ -336,6 +336,10 @@ Isoin ongelma on ollut avaimen näkymiseen saaminen
 
 ![miniondebug](https://github.com/user-attachments/assets/266ce654-84d4-414e-9dbc-e200b42403bf)
 
+
+![mastererror2](https://github.com/user-attachments/assets/18c71c2d-f8ad-4a9e-8f55-0c1f28641acb)
+
+
 Tämä olisi varmasti helpompi tehdä Linuxilla, mutta olen yllättynyt kuinka pitkällä olen päässyt.
 
 Olisin vielä ajanut esimerkiksi nämä komennot, jos olisin pystynyt. En tiedä kyllä miksi avainta ei edes tule näkyviin, jotta voisin hyväksyä sen.
