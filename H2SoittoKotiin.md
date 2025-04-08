@@ -19,6 +19,7 @@ Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (
   
 '''
 {
+
   $tscript = <<TSCRIPT
 set -o verbose
 apt-get update
@@ -43,6 +44,7 @@ Vagrant.configure("2") do |config|
 	end
 	
 end
+
 }
 - orjille pääsee ottamalla ssh-yhteyden komennolla
 
