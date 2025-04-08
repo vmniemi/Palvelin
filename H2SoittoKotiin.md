@@ -124,7 +124,29 @@ Key for minion orja1 accepted.
 Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves, vain kohdat
 
 Infra as Code - Your wishes as a text file
+
+ 		sudo mkdir -p /srv/salt/hello
+		$ sudoedit /srv/salt/hello/init.sls
+.
+
+		$ cat /srv/salt/hello/init.sls
+  
+		/tmp/infra-as-code:
+  			file.managed
+
+			$ sudo salt '*' state.apply hello
+
 top.sls - What Slave Runs What States
+
+ 	sudo salt '*' state.apply hello^C
+	$ sudoedit /srv/salt/top.sls
+	$ cat /srv/salt/top.sls
+	base:
+  		'*':
+    		- hello
+Now you don't have to name any modules on state.apply:
+
+$ sudo salt '*' state.apply
 
 a) Hello Vagrant! Osoita jollain komennolla, että Vagrant on asennettu (esim tulostaa vagrantin versionumeron). Jos et ole vielä asentanut niitä, raportoi myös Vagrant ja VirtualBox asennukset. (Jos Vagrant ja VirtualBox on jo asennettu, niiden asennusta ei tarvitse tehdä eikä raportoida uudelleen.)
 
