@@ -12,6 +12,13 @@ Karvinen 2021: Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (
 - Valitettavasti en ole (vielä) Linux käyttäjä joten latasin sen osoitteesta https://developer.hashicorp.com/vagrant/install Windows-version ja AMD64 version.
 - Vagrantille pitää tehdä oma kansio ja jonne pitää laittaa konfiguraatiotiedosto. Artikkelissä oli opettajan oma esimerkki versio siitä.
 
+  
+  ![Image](https://github.com/user-attachments/assets/b74c0cd9-1bbe-4995-8b58-cb10e9316a43)
+
+  Tässä on minun (alkeellinen) käsitys mitä tiedosto tekee
+  
+'''
+{
   $tscript = <<TSCRIPT
 set -o verbose
 apt-get update
@@ -36,6 +43,7 @@ Vagrant.configure("2") do |config|
 	end
 	
 end
+}
 - orjille pääsee ottamalla ssh-yhteyden komennolla
 
         ssh@koneen_id
