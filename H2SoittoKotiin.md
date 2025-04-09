@@ -378,6 +378,36 @@ En laittanut oikeaan käyttöjärjestelmään, nyt on bookworm64
 En tiedä miksi tein sen tälläin, mutta se on väärin
 
 
+2. Kun laitoin bookworm64, niin alkoi toimimaan paljon paremmin. Oli pieniä ongelmia
+3. 
+
+
+
+![pienisaltongelma](https://github.com/user-attachments/assets/3425bdf8-c043-4367-86cb-95a09dfac3d5)
+
+
+
+
+Mennään orjalle ja käynnistetään uudestaan komennolla 
+
+			sudo systemctl restart salt-minion.service
+
+
+
+   
+
+![minion restart](https://github.com/user-attachments/assets/f6f48acf-917d-4d8d-b2ea-6835021a3786)
+
+
+
+
+![restartin jälkeen](https://github.com/user-attachments/assets/0a2f5d93-f233-43c8-95e8-c99e659bc141)
+
+
+
+
+
+
 ![whoaim](https://github.com/user-attachments/assets/4a845cf8-908e-4cf2-b117-74be043bbb75)
 
 
