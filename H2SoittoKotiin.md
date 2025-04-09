@@ -388,6 +388,14 @@ En tiedä miksi tein sen tälläin, mutta se on väärin
 ![saltap2running](https://github.com/user-attachments/assets/d57c9ff3-50ac-4715-9e57-a841b69901fe)
 
 
+Lopputulos halutaan kayttaja1
+
+![saltkayttaja1](https://github.com/user-attachments/assets/7b454f41-acf1-429a-a619-c31bc506b29f)
+
+
+Kun komento ajetaam uudestaan, ei tapahdu mitään koska idempotenssi on saavutettu
+
+![kayttajaidempotenssi](https://github.com/user-attachments/assets/32db09d8-cc9a-4cde-858e-183d8b6b589d)
 
 
  
