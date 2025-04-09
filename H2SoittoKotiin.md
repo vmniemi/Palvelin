@@ -359,6 +359,7 @@ Tämä olisi varmasti helpompi tehdä Linuxilla, mutta olen yllättynyt kuinka p
 
 Olisin vielä ajanut esimerkiksi nämä komennot, jos olisin pystynyt. En tiedä kyllä miksi avainta ei edes tule näkyviin, jotta voisin hyväksyä sen.
 
+
 			sudo salt '*' state.single user.present käyttäjä1
    			sudo salt '*' state.single pkg.installed apache2
       			sudo salt '*' state.single service.running apache2
@@ -366,11 +367,28 @@ Olisin vielä ajanut esimerkiksi nämä komennot, jos olisin pystynyt. En tiedä
 
 PÄIVTITYS: SAIN TOIMIMAAN
 1.
+
+
 ![bookworm](https://github.com/user-attachments/assets/d25c525a-ff67-4dc0-81ba-90956cd302ec)
 
 En laittanut oikeaan käyttöjärjestelmään, nyt on bookworm64
 
-2. 
+![bullseye](https://github.com/user-attachments/assets/a0caa6cf-a681-45f0-a451-4912bef5966a)
+
+En tiedä miksi tein sen tälläin, mutta se on väärin
+
+
+![whoaim](https://github.com/user-attachments/assets/4a845cf8-908e-4cf2-b117-74be043bbb75)
+
+
+
+![saltapache](https://github.com/user-attachments/assets/14bb6b63-e0c0-455c-ada1-1d9cca415b7c)
+
+
+![saltap2running](https://github.com/user-attachments/assets/d57c9ff3-50ac-4715-9e57-a841b69901fe)
+
+
+
 
  
 Lähteet
