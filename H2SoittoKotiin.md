@@ -355,11 +355,22 @@ Isoin ongelma on ollut avaimen näkymiseen saaminen
 
 Tämä olisi varmasti helpompi tehdä Linuxilla, mutta olen yllättynyt kuinka pitkällä olen päässyt. En tiedä yhtään mistä ongelmat johtuvat, olen kokeillut googlailla tuntikaupalla. Uskon, että se on yhdistelmä lukuisista käyttäjävirheistä ja Windowsistä (enemmän varmaan käyttäjän puolella jos mitään)
 
+
+
 Olisin vielä ajanut esimerkiksi nämä komennot, jos olisin pystynyt. En tiedä kyllä miksi avainta ei edes tule näkyviin, jotta voisin hyväksyä sen.
 
 			sudo salt '*' state.single user.present käyttäjä1
    			sudo salt '*' state.single pkg.installed apache2
       			sudo salt '*' state.single service.running apache2
+
+
+PÄIVTITYS: SAIN TOIMIMAAN
+1.
+![bookworm](https://github.com/user-attachments/assets/d25c525a-ff67-4dc0-81ba-90956cd302ec)
+
+En laittanut oikeaan käyttöjärjestelmään, nyt on bookworm64
+
+2. 
 
  
 Lähteet
